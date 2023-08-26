@@ -20,6 +20,14 @@ function set_and_get_frames_positions() {
     const cadre_5 = document.getElementById("cadre_5");
     cadre_5.style.left = "-100%";
     cadres.push(cadre_5);
+
+    const cadre_6 = document.getElementById("cadre_6");
+    cadre_6.style.right = "-200%";
+    cadres.push(cadre_6);
+
+    const cadre_7 = document.getElementById("cadre_7");
+    cadre_7.style.left = "-100%";
+    cadres.push(cadre_7);
 }
 
 function scroll_function() {
