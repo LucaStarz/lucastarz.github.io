@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Portfolio de JONNARD Lucas</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <h1>Portfolio</h1>
+        <!-- Header -->
+        <div id="total_header" class="total_header">
+            <a href="#photo_moi" onclick="scroll_function();" class="portfolio">Portfolio</a>
+            <div class="header">
+                <a href="#a_propos" onclick="scroll_function();">À propos</a>
+                <a href="#competences" onclick="scroll_function();">Compétences</a>
+                <a href="#projets_personnels" onclick="scroll_function();">Projets personnels</a>
+            </div>
+        </div>
+
+        <!-- Photo de moi -->
+        <img id="photo_moi" class="photo_moi" src="assets/moi.jpg">
+
+        <!-- À propos de moi -->
+        <div id="a_propos" class="a_propos">
+            <h1>À propos de moi</h1>
+
+            <div id="cadre_1" class="cadre cadre_gauche">
+                <p>Je m'appelle Lucas Jonnard, j'ai 19 ans et je suis originaire de Roanne, en région Auvergne-Rhône-Alpes. Je suis actuellement étudiant en seconde année de BUT Informatique à l'IUT de Nantes.</p>
+                <img src="assets/localisation.png" class="image_bordure" width="100%" height="auto">
+            </div>
+
+            <div id="cadre_2" class="cadre cadre_droite">
+                <img src="assets/voyage.gif" class="image_bordure" loop width="150%" height="auto">
+                <p>J'ai choisi de faire mes études aussi loin de ma région de naissance afin d'en découvrir de nouvelles. Je suis passionné par la découverte de nouveaux horizons, en particulier par les recoins qu'offrent la France mais aussi par les bâtiments uniques des villes étrangères.</p>
+            </div>
+
+            <div id="cadre_3" class="cadre cadre_gauche">
+                <p>Je voue également une grande passion pour la musique qui m'accompagne tout au long de mes journées. J'adore particulièrement les musiques rock et j'aimerai bien apprendre à jouer du violon.</p>
+                <img src="assets/violon.gif" width="100%" height="auto">
+            </div>
+
+            <div id="cadre_4" class="cadre cadre_droite">
+                <img src="assets/badminton.gif" width="90%" height="auto">
+                <p>Une autre activité que j'apprécie beaucoup est le sport qui me permet de me changer les idées et booster mon bien-être. J'aime pratiquer la marche et la course en solo pour me ressourcer et le badminton entre amis pour me dépenser et passer du bon temps.</p>
+            </div>
+
+            <div id="cadre_5" class="cadre cadre_gauche">
+                <p>Si je devais citer une dernière passion, ce serait celle de la création de petits jeux-vidéos pour m'amuser. J'ai l'habitude de me lancer de petits défis visant à créer de petits jeux-vidéos sous Unity ou autre pour apprendre de nouvelles choses tout en restant dans un esprit d'amusement.</p>
+                <img src="assets/creation_jeu.gif" class="image_bordure" width="200%" height="auto">
+            </div>
+        </div>
+
+        <div id="competences" class="competences">
+            <h1>Mes compêtences</h1>
+        </div>
+
+        <div id="projets_personnels" class="projets_personnels">
+            <h1>Mes projets personnels</h1>
+        </div>
     </body>
+
+    <script src="script.js"></script>
 </html>

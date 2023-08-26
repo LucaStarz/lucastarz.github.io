@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'textfont';
+    src: url("assets/LibreBaskerville-Regular.ttf");
+}
+
+:root {
+    --text-font: 'textfont';
+    --header-bouton-couleur-texte: #a780f6;
+    --header-bouton-selectionne-background: rgba(167, 167, 167, 0.33);
+    --header-bouton-presse-background: rgba(167, 167, 167, 0.66);
+    --total-header-background: rgba(15, 15, 15, 0.5);
+
+    --a-propos-background: #aa97b4;
+
+    --competences-background: #9c82a9;
+
+    --projets-personnels-background: #af91bf;
+
+    --h1-color: #444242;
+    --h1-stroke-color: #1a1a1a;
+    --cadre-gauche-gradient: linear-gradient(to right, #b4b5e9, #e88b9a);
+    --cadre-droite-gradient: linear-gradient(to left, #b4b5e9, #e88b9a);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--text-font);
+}
+
+body {
+    background: var(--a-propos-background);
+    overflow-x: hidden;
+}
+
+.portfolio {
+    align-self: center;
+    padding: .5%;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 20%;
+    
+    text-decoration: none;
+    background: linear-gradient(to right, #bdacdf, #6c43be);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header {
+    display: flex;
+    align-self: center;
+    width: 80%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 2%;
+    padding-left: 55%;
+}
+
+.header a {
+    color: var(--header-bouton-couleur-texte);
+    font-size: medium;
+    text-decoration: none;
+    padding: 1%;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.header a:hover {
+    background: var(--header-bouton-selectionne-background);
+}
+
+.header a:active {
+    background: var(--header-bouton-presse-background);
+}
+
+.total_header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    background: var(--total-header-background);
+    z-index: 2;
+}
+
+.photo_moi {
+    width: 100%;
+    height: auto;
+}
+
+.a_propos {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background: var(--a-propos-background);
+}
+
+.competences {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background: var(--competences-background);
+}
+
+.projets_personnels {
+    padding-top: 2%;
+    padding-bottom: 15%;
+    background: var(--projets-personnels-background);
+}
+
+h1 {
+    padding-left: 5%;
+    padding-bottom: 1%;
+    font-weight: bold;
+    color: var(--h1-color);
+    -webkit-text-stroke: 2px var(--h1-stroke-color);
+    font-size: 3em;
+}
+
+p {
+    padding-left: 2%;
+    font-size: large;
+}
+
+.cadre {
+    position: relative;
+    display: flex;
+    width: 60%;
+    border-style: groove;
+    border-radius: 10px;
+    margin-top: 1%;
+    animation-delay: 0ms;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cadre_gauche {
+    background: var(--cadre-gauche-gradient);
+}
+
+.cadre_droite {
+    background: var(--cadre-droite-gradient);
+}
+
+.cadre p {
+    font-size: x-large;
+}
+
+.cadre img {
+    margin: 1%;
+    border-radius: 10px;
+}
+
+.image_bordure {
+    border-width: 2px;
+    border-color: #765588;
+    border-style: solid;
+}
+
+@keyframes cadre_gauche_apparition {
+    from {
+        left: -100%;
+    } to {
+        left: 7%;
+    }
+}
+
+@keyframes cadre_droite_apparition {
+    from {
+        right: -200%;
+    } to {
+        right: -32%;
+    }
+}
+
+@keyframes cadre_gauche_disparition {
+    from {
+        left: 7%;
+    } to {
+        left: -100%;
+    }
+}
+
+@keyframes cadre_droite_disparition {
+    from {
+        right: -32%;
+    } to {
+        right: -200%;
+    }
+}
+
+/* redimension du header pour les écrans dont la longueur est inférieure ou égale à 1250px */
+@media (max-width: 1250px) and (min-width: 725px) {
+    .header {
+        padding-left: 25%;
+    }
+}
+
+/* modification du site pour les mobiles */
+@media (max-width: 725px) {
+    .header {
+        padding-left: 0%;
+        width: 60%;
+    }
+
+    .portfolio {
+        width: 40%;
+    }
+}
