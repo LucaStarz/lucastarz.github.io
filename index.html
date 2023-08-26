@@ -64,14 +64,108 @@
         <div id="competences" class="competences">
             <h1 id="titre_competences">Mes compêtences</h1>
 
-            <div id="cadre_8" class="cadre cadre_droite">
-                <img>
-                <p></p>
+            <div id="cadre_8" class="cadre_avec_titre cadre_droite">
+                <p>Développement Web</p>
+                <div>
+                    <img id="image_1" class="image_bordure clickable" onclick="clicked_image(0);" src="./assets/web_0.png" width="400%" height="auto">
+                    <p>Je suis à l'aise avec le développement web, notamment en HTML, CSS et JavaScript / TypeScript que j'ai appris au fil d'un projet de création de site web en première année de BUT Informatique. Je me suis également entrainé en réalisant ce portfolio et le site d'un de mes projets personnels 'Seabow' dont vous prendrez connaissance plus tard.</p>
+                </div>
+            </div>
+
+            <div id="cadre_9" class="cadre_avec_titre cadre_gauche">
+                <p>Développement Orienté Objet</p>
+                <div>
+                    <p>Je maîtrise le concept de POO ainsi que la création d'un diagramme représentant les liens entre chaque entité et j'ai appris à l'implémenter dans divers langages tels quel le Kotlin durant mon BUT et en C#, Java et C++ en autodidacte. Je sais mettre en place un système d'héritage entre plusieurs classes pour optimiser la maintenance du code d'un projet.</p>
+                    <img id="image_2" class="image_bordure clickable" onclick="clicked_image(1);" src="./assets/poo_0.png" width="400%" height="auto">
+                </div>
+            </div>
+
+            <div id="cadre_10" class="cadre_avec_titre cadre_droite">
+                <p>Développement fonctionnel</p>
+                <div>
+                    <img id="image_3" class="clickable" onclick="clicked_image(2);" src="./assets/fonc_0.png" width="400%" height="auto">
+                    <p>J'ai aussi de fortes bases en programmation fonctionnelle grâce à ma maîtrise de langages plus bas niveaux comme le C/C++ et le Go. J'ai appris ces différents langages à travers la programmations de mini-logiciels et d'un projet de générateur de particules réalisé entièrement en Go. Le C et le C++ sont les langages de programmation que j'utilise le plus régulièrement.</p>
+                </div>
+            </div>
+
+            <div id="cadre_11" class="cadre_avec_titre cadre_gauche">
+                <p>Gestion de bases de données</p>
+                <div>
+                    <p>Je sais créer une base de données et lui ajouter de nouvelles tables de données. Je sais également la maintenir en modifiant ses données, les consulter avec la prise en compte de filtres précis et leur ajouter des contraintes d'intégrité pour éviter toute corruption involontaire de données.</p>
+                    <img id="image_4" class="image_bordure clickable" onclick="clicked_image(3);" src="./assets/bd_0.png" width="400%" height="auto">
+                </div>
+            </div>
+
+            <div id="cadre_12" class="cadre_avec_titre cadre_droite">
+                <p>Gestion de réseaux informatiques</p>
+                <div>
+                    <img id="image_5" class="clickable" onclick="clicked_image(4);" src="./assets/reseaux_0.png" width="600%" height="auto">
+                    <p>Je suis à l'aise avec la mise en service de réseaux informatiques en m'adaptant aux contraintes techniques et logicielles. J'ai déjà eu l'opportunité de mettre en place un serveur DHCP ainsi qu'un réseau avec serveur IMAP pour l'envoi de mails. Je sais maintenir un réseau informatique en le faisant évoluer vers de nouveaux protocoles ou en remplaçant les machines obsolètes et en intégrant les nouvelles machines au réseau.</p>
+                </div>
+            </div>
+
+            <div id="cadre_13" class="cadre_avec_titre cadre_gauche">
+                <p>Analyse statistique</p>
+                <div>
+                    <p>Je sais mener une analyse de données en produisant divers diagrammes et en en expliquant les résultats. Je peux aussi utiliser mes compétences dans le langage Python que j'apprend depuis mon année de seconde au lycée et divers modules tels que Pandas afin de générer automatiquement des diagrammes donnés avec diverses données comme entrées.</p>
+                    <img id="image_6" class="clickable" onclick="clicked_image(5);" src="./assets/stats_0.png" width="400%" height="auto">
+                </div>
+            </div>
+
+            <div id="cadre_14" class="cadre_avec_titre cadre_droite">
+                <p>Gestion de projets</p>
+                <div style="padding: 1%;">
+                    <p>J'ai des connaissances me permettant de conduire un projet en organisant celui-ci, en mettant en place des diagrammes explicatifs pour expliquer le but et les étapes du projet. J'ai appris à rédiger un cahier des charges en y listant l'ensemble des tâches de réflexion, une étude de marché et juridique et en y ajoutant des diagrammes modélisant le déroulement du projet et de l'équipe du projet. Je suis aussi capable de mettre en place, partagé et géré un projet GIT afin de faciliter le travail collaboratif.</p>
+                </div>
+            </div>
+
+            <div id="cadre_15" class="cadre_avec_titre cadre_gauche">
+                <p>Anglais</p>
+                <div style="padding: 1%;">
+                    <p>Je possède un bon niveau en anglais et maîtrise un vocabulaire axé sur les technologies et le travail en entreprise me permettant de travailler avec des personnes ne parlant pas ou peu le français. Je sais également rédiger correctement des mails en anglais en respectant les formes principales.</p>
+                </div>
+            </div>
+
+            <div id="cadre_16" class="cadre_avec_titre cadre_droite">
+                <p>Droits relatifs à l'informatique</p>
+                <div style="padding: 1%;">
+                    <p>J'ai une base de connaissances des droits qui s'appliquent au domaine de l'informatique tels que le RGPD, les licences informatiques et autres. Cela me permet par exemple de vérifier des conformités au sein d'un projet informatique.</p>
+                </div>
             </div>
         </div>
 
         <div id="projets_personnels" class="projets_personnels">
             <h1 id="titre_projets_personnels">Mes projets personnels</h1>
+
+            <div id="cadre_17" class="cadre_avec_titre cadre_gauche">
+                <p>Seabow Programming Language</p>
+                <div>
+                    <p>Je me suis lancé un ambitieux défi consistant à définir un nouveau langage de programmation et implémenter en C++ un interpréteur et compilateur de bytecode pour ce nouveau langage. Aujourd'hui, ce projet a bien avancé puisque j'ai maintenant fini de définir les grandes lignes de ce nouveau langage et que l'interpréteur en est à une phase avancé de son développement. J'ai cependant pris du temps supplémentaire pour développer un site web permettant d'apprendre Seabow et le télécharger, même si la plateforme MacOS n'est pas encore disponible. J'ai aussi développé une extension Visual Studio Code pour ce langage appliquant de la couleur au code et des informations utiles lors du survole de certains bouts de code.<br><br>Site web de Seabow: <a href="https://seabowlanguage.github.io/" target="_blank">ici</a>.</p>
+                </div>
+            </div>
+
+            <div id="cadre_18" class="cadre_avec_titre cadre_droite">
+                <p>De petits jeux 2D avec Unity</p>
+                <div>
+                    <img id="image_7" class="clickable" onclick="clicked_image(6);" src="./assets/jeu_vid_0.png" width="500%" height="auto">
+                    <p>Afin d'apprendre à utiliser le moteur de jeu Unity pour produire des jeux-vidéos multiplateformes et avec les notions de GameObject, d'asynchrone, de composantes et autres notions importantes, je me suis régulièrement lancé dans le développement de mini jeux-vidéos 2D pour apprendre de nouvelles choses et mettre en place mes nouveaux acquis.</p>
+                </div>
+            </div>
+
+            <div id="cadre_19" class="cadre_avec_titre cadre_gauche">
+                <p>Une lutte pour l'égalité des genres</p>
+                <div style="padding: 1%;">
+                    <p>Dans les prochaines années, j'aimerai beaucoup rejoindre une association de lutte pour l'égalité des genres car c'est une cause qui me tient très à coeur. Donner du temps pour cette cause serait pour moi une façon d'aider les autres et d'avancer vers une société plus juste.</p>
+                </div>
+            </div>
+
+            <div id="cadre_20" class="cadre_avec_titre cadre_droite">
+                <p>Une découverte du monde nordique</p>
+                <div>
+                    <img src="./assets/suede.jpeg" width="400%" height="auto">
+                    <p>Un de mes projets de longue date serait de m'implanter à l'étranger dans différents pays nordiques durant plusieurs années afin de découvrir leurs cultures et améliorer mes compétences avec diverses méthodes de travail pour ensuite revenir en France.</p>
+                </div>
+            </div>
         </div>
     </body>
 

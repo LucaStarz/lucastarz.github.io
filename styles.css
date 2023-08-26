@@ -9,6 +9,7 @@
     --header-bouton-selectionne-background: rgba(167, 167, 167, 0.33);
     --header-bouton-presse-background: rgba(167, 167, 167, 0.66);
     --total-header-background: rgba(15, 15, 15, 0.5);
+    --portfolio-gradient: linear-gradient(to right, #bdacdf, #6c43be);
 
     --a-propos-background: #aa97b4;
 
@@ -20,6 +21,7 @@
     --h1-stroke-color: #1a1a1a;
     --cadre-gauche-gradient: linear-gradient(to right, #b4b5e9, #e88b9a);
     --cadre-droite-gradient: linear-gradient(to left, #b4b5e9, #e88b9a);
+    --cadre-titre-gradient: linear-gradient(to right, #38a2d7, #561139);
 }
 
 * {
@@ -41,7 +43,7 @@ body {
     width: 20%;
     
     text-decoration: none;
-    background: linear-gradient(to right, #bdacdf, #6c43be);
+    background: var(--portfolio-gradient);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -102,7 +104,7 @@ body {
 
 .projets_personnels {
     padding-top: 2%;
-    padding-bottom: 15%;
+    padding-bottom: 2%;
     background: var(--projets-personnels-background);
 }
 
@@ -132,6 +134,31 @@ p {
     justify-content: space-between;
 }
 
+.cadre_avec_titre {
+    position: relative;
+    display: flex;
+    width: 60%;
+    border-style: groove;
+    border-radius: 10px;
+    margin-top: 1%;
+    animation-delay: 0ms;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cadre_avec_titre > p {
+    background: var(--cadre-titre-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.cadre_avec_titre > div {
+    display: flex;
+}
+
 .cadre_gauche {
     background: var(--cadre-gauche-gradient);
 }
@@ -140,19 +167,25 @@ p {
     background: var(--cadre-droite-gradient);
 }
 
-.cadre p {
+.cadre p, .cadre_avec_titre > div p {
     font-size: x-large;
+    align-self: center;
 }
 
-.cadre img {
+.cadre img, .cadre_avec_titre > div img {
     margin: 1%;
     border-radius: 10px;
+    align-self: center;
 }
 
 .image_bordure {
     border-width: 2px;
     border-color: #765588;
     border-style: solid;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 @keyframes cadre_gauche_apparition {
