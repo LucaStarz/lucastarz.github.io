@@ -187,6 +187,22 @@ p {
     }
 }
 
+@keyframes titre_apparition {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes titre_disparition {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
 /* redimension du header pour les écrans dont la longueur est inférieure ou égale à 1250px */
 @media (max-width: 1250px) and (min-width: 725px) {
     .header {
