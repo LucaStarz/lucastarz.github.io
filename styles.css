@@ -115,6 +115,7 @@ h1 {
     color: var(--h1-color);
     -webkit-text-stroke: 2px var(--h1-stroke-color);
     font-size: 3em;
+    opacity: 1;
 }
 
 p {
@@ -161,10 +162,12 @@ p {
 
 .cadre_gauche {
     background: var(--cadre-gauche-gradient);
+    left: 7%;
 }
 
 .cadre_droite {
     background: var(--cadre-droite-gradient);
+    right: -32%;
 }
 
 .cadre p, .cadre_avec_titre > div p {

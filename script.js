@@ -132,7 +132,7 @@ function scroll_function() {
     for (let i=0; i<cadres.length; i++) {
         const direction = (i%2 == 0) ? "gauche" : "droite";
         const rect = cadres[i].getBoundingClientRect();
-        if (window.innerHeight > rect.top + rect.height / 1.5) {
+        if (window.innerHeight > rect.top + rect.height / 3) {
             cadres[i].style.animation = "cadre_" + direction + "_apparition 2s ease-in-out forwards";
         } else if ((direction === "gauche" && rect.left > 0) || (direction === "droite" && rect.right > 0)) {
             cadres[i].style.animation = "cadre_" + direction + "_disparition 2s ease-in-out forwards";
@@ -142,7 +142,7 @@ function scroll_function() {
     // Animation des titres
     for (const titre of titres) {
         const rect = titre.getBoundingClientRect();
-        if (window.innerHeight > rect.top + rect.height / 1.5) {
+        if (window.innerHeight > rect.top + rect.height / 2) {
             titre.style.animation = "titre_apparition 2s ease-in-out forwards";
         } else if (titre.style.animation !== "titre_disparition 2s ease-in-out forwards") {
             titre.style.animation = "titre_disparition 2s ease-in-out forwards";
