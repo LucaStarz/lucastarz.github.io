@@ -3,99 +3,27 @@ const titres = [];
 const images_multiple = [];
 
 function set_and_get_frames_positions() {
-    const cadre_1 = document.getElementById("cadre_1");
-    cadre_1.style.left = "-100%";
-    cadres.push(cadre_1);
+    const cadres_basiques = document.getElementsByClassName("cadre");
+    for (const c of cadres_basiques) {
+        if (c.classList.contains("cadre_gauche")) { c.style.left = "-100%"; }
+        else { c.style.right = "-200%"; }
+        cadres.push(c);
+    }
 
-    const cadre_2 = document.getElementById("cadre_2");
-    cadre_2.style.right = "-200%";
-    cadres.push(cadre_2);
-
-    const cadre_3 = document.getElementById("cadre_3");
-    cadre_3.style.left = "-100%";
-    cadres.push(cadre_3);
-
-    const cadre_4 = document.getElementById("cadre_4");
-    cadre_4.style.right = "-200%";
-    cadres.push(cadre_4);
-
-    const cadre_5 = document.getElementById("cadre_5");
-    cadre_5.style.left = "-100%";
-    cadres.push(cadre_5);
-
-    const cadre_6 = document.getElementById("cadre_6");
-    cadre_6.style.right = "-200%";
-    cadres.push(cadre_6);
-
-    const cadre_7 = document.getElementById("cadre_7");
-    cadre_7.style.left = "-100%";
-    cadres.push(cadre_7);
-
-    const cadre_8 = document.getElementById("cadre_8");
-    cadre_8.style.right = "-200%";
-    cadres.push(cadre_8);
-
-    const cadre_9 = document.getElementById("cadre_9");
-    cadre_9.style.left = "-100%";
-    cadres.push(cadre_9);
-
-    const cadre_10 = document.getElementById("cadre_10");
-    cadre_10.style.right = "-200%";
-    cadres.push(cadre_10);
-
-    const cadre_11 = document.getElementById("cadre_11");
-    cadre_11.style.left = "-100%";
-    cadres.push(cadre_11);
-
-    const cadre_12 = document.getElementById("cadre_12");
-    cadre_12.style.right = "-200%";
-    cadres.push(cadre_12);
-
-    const cadre_13 = document.getElementById("cadre_13");
-    cadre_13.style.left = "-100%";
-    cadres.push(cadre_13);
-
-    const cadre_14 = document.getElementById("cadre_14");
-    cadre_14.style.right = "-200%";
-    cadres.push(cadre_14);
-
-    const cadre_15 = document.getElementById("cadre_15");
-    cadre_15.style.left = "-100%";
-    cadres.push(cadre_15);
-
-    const cadre_16 = document.getElementById("cadre_16");
-    cadre_16.style.right = "-200%";
-    cadres.push(cadre_16);
-
-    const cadre_17 = document.getElementById("cadre_17");
-    cadre_17.style.left = "-100%";
-    cadres.push(cadre_17);
-
-    const cadre_18 = document.getElementById("cadre_18");
-    cadre_18.style.right = "-200%";
-    cadres.push(cadre_18);
-
-    const cadre_19 = document.getElementById("cadre_19");
-    cadre_19.style.left = "-100%";
-    cadres.push(cadre_19);
-
-    const cadre_20 = document.getElementById("cadre_20");
-    cadre_20.style.right = "-200%";
-    cadres.push(cadre_20);
+    const cadres_avec_titres = document.getElementsByClassName("cadre_avec_titre");
+    for (const c of cadres_avec_titres) {
+        if (c.classList.contains("cadre_gauche")) { c.style.left = "-100%"; }
+        else { c.style.right = "-200%"; }
+        cadres.push(c);
+    }
 }
 
 function get_titles() {
-    const titre_a_propos = document.getElementById("titre_a_propos");
-    titre_a_propos.style.opacity = "0";
-    titres.push(titre_a_propos);
-
-    const titre_competences = document.getElementById("titre_competences");
-    titre_competences.style.opacity = "0";
-    titres.push(titre_competences);
-
-    const titre_projets_personnels = document.getElementById("titre_projets_personnels");
-    titre_projets_personnels.style.opacity = "0";
-    titres.push(titre_projets_personnels);
+    const h1 = document.getElementsByTagName("h1");
+    for (const h of h1) {
+        h.style.opacity = "0";
+        titres.push(h);
+    }
 }
 
 function get_images_multiple() {
