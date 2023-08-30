@@ -133,6 +133,7 @@ p {
     animation-delay: 0ms;
     align-items: center;
     justify-content: space-between;
+    padding: 1%;
 }
 
 .cadre_avec_titre {
@@ -145,6 +146,7 @@ p {
     animation-delay: 0ms;
     align-items: center;
     flex-direction: column;
+    padding: 1%;
 }
 
 .cadre_avec_titre > p {
