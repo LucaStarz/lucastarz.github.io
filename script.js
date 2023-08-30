@@ -84,6 +84,20 @@ function clicked_image(index) {
     image.image.src = image.path + image.current + ".png";
 }
 
+const diaporama_img = document.getElementById("photo_moi");
+let diaporama_interval = 0;
+let diaporama_count = 0;
+function diaporama() {
+    clearInterval(diaporama_interval);
+
+    diaporama_count = (diaporama_count + 1) % 5;
+    diaporama_img.src = "./assets/moi_" + diaporama_count + ".jpg";
+
+    diaporama_interval = setInterval(() => {
+        diaporama();
+    }, 3000);
+}
+
 
 set_and_get_frames_positions();
 get_titles();
@@ -97,4 +111,8 @@ setInterval(() => {
     for (let i=0; i<images_multiple.length; i++) {
         clicked_image(i);
     }
+}, 3000);
+
+diaporama_interval = setInterval(() => {
+    diaporama();
 }, 3000);
