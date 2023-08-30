@@ -62,7 +62,7 @@ function scroll_function() {
         const rect = cadres[i].getBoundingClientRect();
         if (window.innerHeight > rect.top + rect.height / 3) {
             cadres[i].style.animation = "cadre_" + direction + "_apparition 2s ease-in-out forwards";
-        } else {
+        } else if ((direction === "gauche" && rect.left > -50) || (direction === "droite" && rect.right > -100)) {
             cadres[i].style.animation = "cadre_" + direction + "_disparition 2s ease-in-out forwards";
         }
     }
@@ -72,7 +72,7 @@ function scroll_function() {
         const rect = titre.getBoundingClientRect();
         if (window.innerHeight > rect.top + rect.height / 2) {
             titre.style.animation = "titre_apparition 2s ease-in-out forwards";
-        } else {
+        } else if (titre.style.opacity > 0) {
             titre.style.animation = "titre_disparition 2s ease-in-out forwards";
         }
     }
